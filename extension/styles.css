@@ -43,7 +43,8 @@
 
 /* Rendered content styles */
 .xmd-rendered {
-	line-height: 1.6;
+	line-height: 1.4;
+	display: block;
 }
 
 .xmd-rendered h1,
@@ -52,7 +53,7 @@
 .xmd-rendered h4,
 .xmd-rendered h5,
 .xmd-rendered h6 {
-	margin: 16px 0 8px 0;
+	margin: 0.5em 0 0.3em 0;
 	font-weight: bold;
 	color: rgb(239, 243, 244);
 }
@@ -71,21 +72,32 @@
 }
 
 .xmd-rendered p {
-	margin: 8px 0;
+	margin: 0.3em 0;
 }
 
 .xmd-rendered ul,
 .xmd-rendered ol {
-	margin: 8px 0;
-	padding-left: 20px;
+	margin: 0.4em 0;
+	padding-left: 1.5em;
+	list-style: disc;
+}
+
+.xmd-rendered ol {
+	list-style: decimal;
 }
 
 .xmd-rendered li {
-	margin: 4px 0;
+	margin: 0.2em 0;
+	line-height: 1.4;
+	display: list-item;
+}
+
+.xmd-rendered li p {
+	margin: 0;
 }
 
 .xmd-rendered blockquote {
-	margin: 12px 0;
+	margin: 0.5em 0;
 	padding: 8px 16px;
 	border-left: 3px solid rgb(29, 155, 240);
 	background: rgba(29, 155, 240, 0.1);
@@ -101,12 +113,12 @@
 	background: rgb(22, 24, 28);
 	border: 1px solid rgb(47, 51, 54);
 	border-radius: 8px;
-	padding: 16px;
-	margin: 12px 0;
+	padding: 0.8em 1em;
+	margin: 0.5em 0;
 	overflow-x: auto;
 	font-family: "SFMono-Regular", "Consolas", "Liberation Mono", "Menlo",
 		monospace;
-	font-size: 14px;
+	font-size: 0.9em;
 	line-height: 1.4;
 }
 
@@ -223,7 +235,105 @@
 
 /* Task lists */
 .xmd-rendered input[type="checkbox"] {
-	margin-right: 8px;
+	margin-right: 0.5em;
+	vertical-align: middle;
+}
+
+/* Hide bullet points for checkbox list items */
+.xmd-rendered ul input[type="checkbox"] {
+	display: inline-block;
+}
+.xmd-rendered ul input[type="checkbox"]:first-child {
+	margin-left: -1.2em;
+}
+.xmd-rendered ul li:has(input[type="checkbox"]) {
+	list-style-type: none;
+}
+
+/* Override X.com's tweetText container spacing when rendering markdown */
+div[data-testid="tweetText"].xmd-rendered {
+	display: block !important;
+	line-height: 1.4 !important;
+	white-space: normal !important;
+}
+
+div[data-testid="tweetText"].xmd-rendered > * {
+	margin-top: 0 !important;
+	margin-bottom: 0.3em !important;
+}
+
+div[data-testid="tweetText"].xmd-rendered > *:first-child {
+	margin-top: 0 !important;
+}
+
+div[data-testid="tweetText"].xmd-rendered > *:last-child {
+	margin-bottom: 0 !important;
+}
+
+/* Force tight spacing for all children in the tweet text container */
+div[data-testid="tweetText"].xmd-rendered p,
+div[data-testid="tweetText"].xmd-rendered ul,
+div[data-testid="tweetText"].xmd-rendered ol,
+div[data-testid="tweetText"].xmd-rendered h1,
+div[data-testid="tweetText"].xmd-rendered h2,
+div[data-testid="tweetText"].xmd-rendered h3,
+div[data-testid="tweetText"].xmd-rendered h4,
+div[data-testid="tweetText"].xmd-rendered h5,
+div[data-testid="tweetText"].xmd-rendered h6,
+div[data-testid="tweetText"].xmd-rendered pre,
+div[data-testid="tweetText"].xmd-rendered blockquote {
+	margin-top: 0 !important;
+	margin-bottom: 0.3em !important;
+}
+
+/* Even tighter spacing for list items */
+div[data-testid="tweetText"].xmd-rendered li {
+	margin-top: 0 !important;
+	margin-bottom: 0.15em !important;
+}
+
+div[data-testid="tweetText"].xmd-rendered p {
+	margin: 0.3em 0 !important;
+	display: block !important;
+}
+
+div[data-testid="tweetText"].xmd-rendered ul,
+div[data-testid="tweetText"].xmd-rendered ol {
+	margin: 0.4em 0 !important;
+	padding-left: 1.5em !important;
+	display: block !important;
+	list-style: disc !important;
+}
+
+div[data-testid="tweetText"].xmd-rendered ol {
+	list-style: decimal !important;
+}
+
+div[data-testid="tweetText"].xmd-rendered li {
+	margin: 0.15em 0 !important;
+	display: list-item !important;
+}
+
+div[data-testid="tweetText"].xmd-rendered h1,
+div[data-testid="tweetText"].xmd-rendered h2,
+div[data-testid="tweetText"].xmd-rendered h3,
+div[data-testid="tweetText"].xmd-rendered h4,
+div[data-testid="tweetText"].xmd-rendered h5,
+div[data-testid="tweetText"].xmd-rendered h6 {
+	margin: 0.5em 0 0.3em 0 !important;
+	display: block !important;
+}
+
+div[data-testid="tweetText"].xmd-rendered pre {
+	margin: 0.5em 0 !important;
+	padding: 0.8em !important;
+	display: block !important;
+}
+
+div[data-testid="tweetText"].xmd-rendered code {
+	display: inline !important;
+	padding: 0.1em 0.3em !important;
+	margin: 0 !important;
 }
 
 /* Dark theme compatibility */
