@@ -1,4 +1,6 @@
-# X Markdown Renderer
+# **Kawaii-X**, Markdown Renderer for your tweets
+
+![kawaii-x-logo](./extension/assets/kawaii_128.png)
 
 Chrome extension for rendering Markdown in X.com tweets with syntax highlighting.
 
@@ -14,9 +16,14 @@ Chrome extension for rendering Markdown in X.com tweets with syntax highlighting
    bun run build
    ```
 
- **For development with auto-rebuild**:
-   ```powershell
-   bun run dev
-   ```
+## Loading
+- Open Chrome/Brave and go to `chrome://extensions/`
+- Enable Developer Mode
+- Click **Load Unpacked**
+![alt text](./assets/ext-page.png)
+- Select `/extension` folder
+  
+
+---
 
 Copyright © 2025-present ८४ Labs. :D
