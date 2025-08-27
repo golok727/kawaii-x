@@ -3,8 +3,8 @@
 	"version": "1.0.0",
 	"type": "module",
 	"scripts": {
-		"build": "bun build src/content.ts --outdir . --target browser",
-		"dev": "bun build src/content.ts --outdir . --target browser --watch"
+		"build": "bun build src/main.ts --outdir ./dist --target browser",
+		"dev": "bun build src/main.ts --outdir ./dist --target browser --watch"
 	},
 	"devDependencies": {
 		"@types/chrome": "^0.0.268",
