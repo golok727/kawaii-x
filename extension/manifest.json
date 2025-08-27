@@ -5,6 +5,11 @@
 	"description": "Render Markdown in X.com tweets with syntax highlighting",
 	"permissions": ["activeTab"],
 	"host_permissions": ["*://x.com/*", "*://twitter.com/*"],
+	"icons": {
+		"16": "assets/kawaii_16.png",
+		"48": "assets/kawaii_48.png",
+		"128": "assets/kawaii_128.png"
+	},
 	"content_scripts": [
 		{
 			"matches": ["*://x.com/*", "*://twitter.com/*"],
