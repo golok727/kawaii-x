@@ -43,7 +43,7 @@
 
 /* Rendered content styles */
 .xmd-rendered {
-	line-height: 1.4;
+	line-height: 1.5;
 	display: block;
 }
 
@@ -53,7 +53,7 @@
 .xmd-rendered h4,
 .xmd-rendered h5,
 .xmd-rendered h6 {
-	margin: 0.5em 0 0.3em 0;
+	margin: 0.8em 0 0.5em 0;
 	font-weight: bold;
 	color: rgb(239, 243, 244);
 }
@@ -72,13 +72,13 @@
 }
 
 .xmd-rendered p {
-	margin: 0.3em 0;
+	margin: 0.5em 0;
 }
 
 .xmd-rendered ul,
 .xmd-rendered ol {
-	margin: 0.4em 0;
-	padding-left: 1.5em;
+	margin: 0.6em 0;
+	padding-left: 1.8em;
 	list-style: disc;
 }
 
@@ -87,8 +87,8 @@
 }
 
 .xmd-rendered li {
-	margin: 0.2em 0;
-	line-height: 1.4;
+	margin: 0.3em 0;
+	line-height: 1.5;
 	display: list-item;
 }
 
@@ -97,8 +97,8 @@
 }
 
 .xmd-rendered blockquote {
-	margin: 0.5em 0;
-	padding: 8px 16px;
+	margin: 0.7em 0;
+	padding: 12px 20px;
 	border-left: 3px solid rgb(29, 155, 240);
 	background: rgba(29, 155, 240, 0.1);
 	border-radius: 0 8px 8px 0;
@@ -113,13 +113,13 @@
 	background: rgb(22, 24, 28);
 	border: 1px solid rgb(47, 51, 54);
 	border-radius: 8px;
-	padding: 0.8em 1em;
-	margin: 0.5em 0;
+	padding: 1em 1.2em;
+	margin: 0.7em 0;
 	overflow-x: auto;
 	font-family: "SFMono-Regular", "Consolas", "Liberation Mono", "Menlo",
 		monospace;
 	font-size: 0.9em;
-	line-height: 1.4;
+	line-height: 1.5;
 }
 
 .xmd-rendered pre code {
@@ -259,7 +259,7 @@ div[data-testid="tweetText"].xmd-rendered {
 
 div[data-testid="tweetText"].xmd-rendered > * {
 	margin-top: 0 !important;
-	margin-bottom: 0.3em !important;
+	margin-bottom: 0.4em !important;
 }
 
 div[data-testid="tweetText"].xmd-rendered > *:first-child {
@@ -293,14 +293,14 @@ div[data-testid="tweetText"].xmd-rendered li {
 }
 
 div[data-testid="tweetText"].xmd-rendered p {
-	margin: 0.3em 0 !important;
+	margin: 0.4em 0 !important;
 	display: block !important;
 }
 
 div[data-testid="tweetText"].xmd-rendered ul,
 div[data-testid="tweetText"].xmd-rendered ol {
-	margin: 0.4em 0 !important;
-	padding-left: 1.5em !important;
+	margin: 0.5em 0 !important;
+	padding-left: 1.8em !important;
 	display: block !important;
 	list-style: disc !important;
 }
@@ -310,7 +310,7 @@ div[data-testid="tweetText"].xmd-rendered ol {
 }
 
 div[data-testid="tweetText"].xmd-rendered li {
-	margin: 0.15em 0 !important;
+	margin: 0.2em 0 !important;
 	display: list-item !important;
 }
 
@@ -320,13 +320,13 @@ div[data-testid="tweetText"].xmd-rendered h3,
 div[data-testid="tweetText"].xmd-rendered h4,
 div[data-testid="tweetText"].xmd-rendered h5,
 div[data-testid="tweetText"].xmd-rendered h6 {
-	margin: 0.5em 0 0.3em 0 !important;
+	margin: 0.6em 0 0.4em 0 !important;
 	display: block !important;
 }
 
 div[data-testid="tweetText"].xmd-rendered pre {
-	margin: 0.5em 0 !important;
-	padding: 0.8em !important;
+	margin: 0.6em 0 !important;
+	padding: 1em !important;
 	display: block !important;
 }
 
