@@ -19,3 +19,4 @@ Chrome extension for rendering Markdown in X.com tweets with syntax highlighting
    bun run dev
    ```
 
+Copyright © 2025-present ८४ Labs. :D
