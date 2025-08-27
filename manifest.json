@@ -1,0 +1,22 @@
+{
+	"manifest_version": 3,
+	"name": "X Markdown Renderer",
+	"version": "1.0.0",
+	"description": "Render Markdown in X.com tweets with syntax highlighting",
+	"permissions": ["activeTab"],
+	"host_permissions": ["*://x.com/*", "*://twitter.com/*"],
+	"content_scripts": [
+		{
+			"matches": ["*://x.com/*", "*://twitter.com/*"],
+			"js": ["content.js"],
+			"css": ["styles.css"],
+			"run_at": "document_idle"
+		}
+	],
+	"web_accessible_resources": [
+		{
+			"resources": ["styles.css"],
+			"matches": ["*://x.com/*", "*://twitter.com/*"]
+		}
+	]
+}

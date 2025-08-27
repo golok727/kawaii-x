@@ -1,0 +1,21 @@
+{
+	"name": "xdown",
+	"version": "1.0.0",
+	"type": "module",
+	"scripts": {
+		"build": "bun build src/content.ts --outdir . --target browser",
+		"dev": "bun build src/content.ts --outdir . --target browser --watch"
+	},
+	"devDependencies": {
+		"@types/chrome": "^0.0.268",
+		"typescript": "^5.0.0"
+	},
+	"dependencies": {
+		"remark": "^15.0.1",
+		"remark-gfm": "^4.0.0",
+		"remark-rehype": "^11.1.0",
+		"rehype-stringify": "^10.0.0",
+		"rehype-highlight": "^7.0.0",
+		"highlight.js": "^11.9.0"
+	}
+}

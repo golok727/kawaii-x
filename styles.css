@@ -1,0 +1,268 @@
+/* Button Styles */
+.xmd-button {
+	display: inline-flex;
+	align-items: center;
+	gap: 4px;
+	padding: 6px 8px;
+	background: transparent;
+	border: 1px solid rgb(83, 100, 113);
+	border-radius: 16px;
+	color: rgb(139, 152, 165);
+	font-size: 12px;
+	font-weight: 600;
+	cursor: pointer;
+	transition: all 0.2s ease;
+	margin-right: 8px;
+}
+
+.xmd-button:hover {
+	background-color: rgba(83, 100, 113, 0.1);
+	border-color: rgb(139, 152, 165);
+	color: rgb(239, 243, 244);
+}
+
+.xmd-button:active {
+	transform: scale(0.95);
+}
+
+.xmd-button svg {
+	width: 14px;
+	height: 14px;
+}
+
+/* Spinner animation */
+.xmd-spinner {
+	animation: xmd-spin 1s linear infinite;
+}
+
+@keyframes xmd-spin {
+	to {
+		transform: rotate(360deg);
+	}
+}
+
+/* Rendered content styles */
+.xmd-rendered {
+	line-height: 1.6;
+}
+
+.xmd-rendered h1,
+.xmd-rendered h2,
+.xmd-rendered h3,
+.xmd-rendered h4,
+.xmd-rendered h5,
+.xmd-rendered h6 {
+	margin: 16px 0 8px 0;
+	font-weight: bold;
+	color: rgb(239, 243, 244);
+}
+
+.xmd-rendered h1 {
+	font-size: 1.5em;
+}
+.xmd-rendered h2 {
+	font-size: 1.3em;
+}
+.xmd-rendered h3 {
+	font-size: 1.1em;
+}
+.xmd-rendered h4 {
+	font-size: 1em;
+}
+
+.xmd-rendered p {
+	margin: 8px 0;
+}
+
+.xmd-rendered ul,
+.xmd-rendered ol {
+	margin: 8px 0;
+	padding-left: 20px;
+}
+
+.xmd-rendered li {
+	margin: 4px 0;
+}
+
+.xmd-rendered blockquote {
+	margin: 12px 0;
+	padding: 8px 16px;
+	border-left: 3px solid rgb(29, 155, 240);
+	background: rgba(29, 155, 240, 0.1);
+	border-radius: 0 8px 8px 0;
+}
+
+.xmd-rendered blockquote p {
+	margin: 0;
+}
+
+/* Code styles */
+.xmd-rendered pre {
+	background: rgb(22, 24, 28);
+	border: 1px solid rgb(47, 51, 54);
+	border-radius: 8px;
+	padding: 16px;
+	margin: 12px 0;
+	overflow-x: auto;
+	font-family: "SFMono-Regular", "Consolas", "Liberation Mono", "Menlo",
+		monospace;
+	font-size: 14px;
+	line-height: 1.4;
+}
+
+.xmd-rendered pre code {
+	background: none !important;
+	padding: 0 !important;
+	border: none !important;
+	border-radius: 0 !important;
+	color: inherit;
+}
+
+.xmd-rendered code {
+	background: rgba(29, 155, 240, 0.1) !important;
+	border: 1px solid rgba(29, 155, 240, 0.3) !important;
+	border-radius: 4px !important;
+	padding: 2px 6px !important;
+	font-family: "SFMono-Regular", "Consolas", "Liberation Mono", "Menlo",
+		monospace !important;
+	font-size: 0.9em !important;
+	color: rgb(29, 155, 240) !important;
+}
+
+/* Highlight.js syntax highlighting */
+.xmd-rendered .hljs {
+	color: #e6edf3;
+	background: rgb(22, 24, 28);
+}
+
+.xmd-rendered .hljs-keyword,
+.xmd-rendered .hljs-selector-tag,
+.xmd-rendered .hljs-built_in {
+	color: #ff7b72;
+}
+
+.xmd-rendered .hljs-string,
+.xmd-rendered .hljs-doctag {
+	color: #a5d6ff;
+}
+
+.xmd-rendered .hljs-title,
+.xmd-rendered .hljs-section {
+	color: #79c0ff;
+}
+
+.xmd-rendered .hljs-comment,
+.xmd-rendered .hljs-quote {
+	color: #8b949e;
+	font-style: italic;
+}
+
+.xmd-rendered .hljs-number,
+.xmd-rendered .hljs-literal {
+	color: #79c0ff;
+}
+
+.xmd-rendered .hljs-variable,
+.xmd-rendered .hljs-template-variable,
+.xmd-rendered .hljs-attribute {
+	color: #ffa657;
+}
+
+.xmd-rendered .hljs-regexp,
+.xmd-rendered .hljs-link {
+	color: #a5d6ff;
+}
+
+.xmd-rendered .hljs-meta {
+	color: #d2a8ff;
+}
+
+.xmd-rendered .hljs-type {
+	color: #79c0ff;
+}
+
+.xmd-rendered .hljs-function {
+	color: #d2a8ff;
+}
+
+/* Links */
+.xmd-rendered a {
+	color: rgb(29, 155, 240);
+	text-decoration: none;
+}
+
+.xmd-rendered a:hover {
+	text-decoration: underline;
+}
+
+/* Tables */
+.xmd-rendered table {
+	border-collapse: collapse;
+	margin: 12px 0;
+	width: 100%;
+}
+
+.xmd-rendered th,
+.xmd-rendered td {
+	border: 1px solid rgb(47, 51, 54);
+	padding: 8px 12px;
+	text-align: left;
+}
+
+.xmd-rendered th {
+	background: rgb(22, 24, 28);
+	font-weight: bold;
+}
+
+/* Horizontal rule */
+.xmd-rendered hr {
+	border: none;
+	border-top: 1px solid rgb(47, 51, 54);
+	margin: 16px 0;
+}
+
+/* Task lists */
+.xmd-rendered input[type="checkbox"] {
+	margin-right: 8px;
+}
+
+/* Dark theme compatibility */
+@media (prefers-color-scheme: light) {
+	.xmd-button {
+		border-color: rgb(207, 217, 222);
+		color: rgb(83, 100, 113);
+	}
+
+	.xmd-button:hover {
+		background-color: rgba(15, 20, 25, 0.1);
+		border-color: rgb(83, 100, 113);
+		color: rgb(15, 20, 25);
+	}
+
+	.xmd-rendered h1,
+	.xmd-rendered h2,
+	.xmd-rendered h3,
+	.xmd-rendered h4,
+	.xmd-rendered h5,
+	.xmd-rendered h6 {
+		color: rgb(15, 20, 25);
+	}
+
+	.xmd-rendered pre {
+		background: rgb(247, 249, 249);
+		border-color: rgb(207, 217, 222);
+	}
+
+	.xmd-rendered th {
+		background: rgb(247, 249, 249);
+	}
+
+	.xmd-rendered th,
+	.xmd-rendered td {
+		border-color: rgb(207, 217, 222);
+	}
+
+	.xmd-rendered hr {
+		border-top-color: rgb(207, 217, 222);
+	}
+}

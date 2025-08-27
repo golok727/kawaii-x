@@ -1,0 +1,7 @@
+[build]
+target = "browser"
+outdir = "."
+minify = true
+
+[install]
+cache = false
