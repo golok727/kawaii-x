@@ -27407,6 +27407,13 @@ class MarkdownRenderer {
 }
 
 // src/content.ts
+var __DEV__ = false;
+var log = (...args) => {
+  if (__DEV__) {
+    console.log(...args);
+  }
+};
+
 class XMarkdownExtension {
   renderer;
   tweets = new Map;
@@ -27459,7 +27466,7 @@ class XMarkdownExtension {
   }
   processTweets() {
     const tweets = document.querySelectorAll('article[data-testid="tweet"]');
-    console.log(`Found ${tweets.length} tweets to process`);
+    log(`Found ${tweets.length} tweets to process`);
     tweets.forEach((tweet) => this.processTweet(tweet));
   }
   processTweet(tweet) {
@@ -27467,10 +27474,10 @@ class XMarkdownExtension {
       return;
     const tweetTextContainer = tweet.querySelector('div[data-testid="tweetText"]');
     if (!tweetTextContainer) {
-      console.log("No tweetText container found in:", tweet);
+      log("No tweetText container found in:", tweet);
       return;
     }
-    console.log("Processing tweet with text container:", tweetTextContainer);
+    log("Processing tweet with text container:", tweetTextContainer);
     this.processedTweets.add(tweet);
     this.addMarkdownButton(tweet, tweetTextContainer);
   }

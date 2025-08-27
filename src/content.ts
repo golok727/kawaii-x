@@ -1,4 +1,3 @@
-// Fast content script for X.com Markdown rendering
 import { MarkdownRenderer } from "./renderer.js";
 
 interface TweetData {
@@ -7,6 +6,14 @@ interface TweetData {
 	isRendered: boolean;
 	button?: HTMLButtonElement;
 }
+
+const __DEV__ = false;
+
+const log = (...args: any[]) => {
+	if (__DEV__) {
+		console.log(...args);
+	}
+};
 
 class XMarkdownExtension {
 	private renderer: MarkdownRenderer;
@@ -75,7 +82,7 @@ class XMarkdownExtension {
 	private processTweets(): void {
 		// Find all tweet containers on the page
 		const tweets = document.querySelectorAll('article[data-testid="tweet"]');
-		console.log(`Found ${tweets.length} tweets to process`);
+		log(`Found ${tweets.length} tweets to process`);
 		tweets.forEach((tweet) => this.processTweet(tweet as HTMLElement));
 	}
 
@@ -87,11 +94,11 @@ class XMarkdownExtension {
 			'div[data-testid="tweetText"]'
 		);
 		if (!tweetTextContainer) {
-			console.log("No tweetText container found in:", tweet);
+			log("No tweetText container found in:", tweet);
 			return;
 		}
 
-		console.log("Processing tweet with text container:", tweetTextContainer);
+		log("Processing tweet with text container:", tweetTextContainer);
 		this.processedTweets.add(tweet);
 		this.addMarkdownButton(tweet, tweetTextContainer as HTMLElement);
 	}

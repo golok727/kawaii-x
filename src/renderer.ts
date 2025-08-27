@@ -32,9 +32,7 @@ export class MarkdownRenderer {
 			.use(rehypeStringify, { allowDangerousHtml: true });
 	}
 
-	async init(): Promise<void> {
-		// No initialization needed for rehype-highlight
-	}
+	async init(): Promise<void> {}
 
 	async render(markdown: string): Promise<string> {
 		try {
